@@ -30,7 +30,7 @@ const Auth = ( {setShowAuth, signedUp} ) => {
                     </svg>
                 </div> */}
                     <div>
-                        <form className="bg-orange-200 shadow-md rounded px-8 pt-6 pb-6 w-80" onSubmit={handleSubmit}>
+                        <form className="bg-orange-200 shadow-md rounded px-8 pt-6 pb-6 w-80 drop-shadow-[0_3.2px_3.9px_black]" onSubmit={handleSubmit}>
 
                         <h2 className="text-white font-bold text-3xl pb-4 font-poppins drop-shadow-[0_3.2px_3.9px_black]">{
                             signedUp ?
@@ -49,9 +49,9 @@ const Auth = ( {setShowAuth, signedUp} ) => {
 
                             <div className="p-6 border-t border-solid border-blueGray-200 rounded-b mx-auto">
                  
-                                <button className="text-white bg-rose-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1" type="button"onClick={() => setShowAuth(false)}>Close</button>
+                                <button className="text-white bg-rose-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 hover:animate-pulse" type="button"onClick={() => setShowAuth(false)}>Close</button>
                   
-                                <input className="text-white bg-rose-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1" type="submit" onClick={() => setShowAuth(false)}/>
+                                <input className="text-white bg-rose-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 hover:animate-pulse" type="submit" onClick={() => setShowAuth(false)}/>
 
                             </div>
                             <p>{error}</p>

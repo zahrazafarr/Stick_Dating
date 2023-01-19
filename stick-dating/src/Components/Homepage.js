@@ -18,7 +18,7 @@ const Home = () => {
     return (
         <>        
 
-            <Navbar setSignedUp={setSignedUp} authToken={authToken} showAuth={showAuth} setShowAuth={setShowAuth}/>
+            <Navbar setSignedUp={setSignedUp} showAuth={showAuth} setShowAuth={setShowAuth}/>
 
             <div className="grid h-screen place-items-center text-center bg-[url('https://media.istockphoto.com/id/1297583775/photo/happy-young-couple-in-love-hugging-laughing-drinking-wine-enjoying-talking-having-fun.jpg?s=612x612&w=0&k=20&c=pG_vsPl9u-djI9giASN78-yMbEvbvr3VGq7Lh_j9jBg=')] bg-auto">
 

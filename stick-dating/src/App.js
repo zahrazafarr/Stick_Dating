@@ -1,5 +1,5 @@
 import Home from './Components/Homepage'
-import Login from './Components/Login'
+import Account from './Components/Account'
 import Dashboard from './Components/Dash'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -12,7 +12,7 @@ function App() {
       <Routes>
 
         <Route path='/' element={<Home/>}/>
-        <Route path='/login' element={<Login/>}/>
+        <Route path='/account' element={<Account/>}/>
         <Route path='/dashboard' element={<Dashboard/>}/>
 
       </Routes>
