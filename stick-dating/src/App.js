@@ -1,6 +1,6 @@
 import Home from './Components/Homepage'
 import Login from './Components/Login'
-import Dash from './Components/Dash'
+import Dashboard from './Components/Dash'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
  
@@ -8,11 +8,15 @@ function App() {
 
   return (
 
-    <div>
+    <BrowserRouter>
+      <Routes>
 
-     <h1 className="text-3xl font-bold">Stick</h1>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/dashboard' element={<Dashboard/>}/>
 
-    </div>
+      </Routes>
+    </BrowserRouter>
 
   );
 }
