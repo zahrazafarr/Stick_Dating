@@ -1,10 +1,10 @@
-const Navbar = ( {setSignedUp, showAuth, setShowAuth} ) => {
+const Navbar = ( {setSigningUp, showAuth, setShowAuth} ) => {
 
     const authToken = false
 
     const handleClick = () => {
         setShowAuth(true)
-        setSignedUp(false)
+        setSigningUp(false)
     }
 
     return (

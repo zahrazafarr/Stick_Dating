@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const Auth = ( {setShowAuth, signedUp} ) => {
+const Auth = ( {setShowAuth, signingUp} ) => {
 
     const [email, setEmail] = useState(null)
 
@@ -15,7 +15,7 @@ const Auth = ( {setShowAuth, signedUp} ) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         try {
-            if( signedUp && ( pw !== confirmPw)) {setError("Passwords don't match")} 
+            if( signingUp && ( pw !== confirmPw)) {setError("Passwords don't match")} 
         }   
             catch (error) {console.log(error)
         }
@@ -33,7 +33,7 @@ const Auth = ( {setShowAuth, signedUp} ) => {
                         <form className="bg-orange-200 shadow-md rounded px-8 pt-6 pb-6 w-80 drop-shadow-[0_3.2px_3.9px_black]" onSubmit={handleSubmit}>
 
                         <h2 className="text-white font-bold text-3xl pb-4 font-poppins drop-shadow-[0_3.2px_3.9px_black]">{
-                            signedUp ?
+                            signingUp ?
                             'Create Account' : 
                             'Login'
                             }
@@ -44,7 +44,7 @@ const Auth = ( {setShowAuth, signedUp} ) => {
 
                             <input className="shadow appearance-none border rounded w-full mb-2 py-2 px-1 text-black text-center" type="password" name="password" placeholder="Password" required={true} onChange={(e) => setPw(e.target.value)}/>
 
-                            { signedUp && <input className="shadow appearance-none border rounded w-full mb-2 py-2 px-1 text-black text-center" 
+                            { signingUp && <input className="shadow appearance-none border rounded w-full mb-2 py-2 px-1 text-black text-center" 
                             type="password" name="confirmPw" placeholder="Confirm Password" required={true} onChange={(e) => setConfirmPw(e.target.value)}/> }
 
                             <div className="p-6 border-t border-solid border-blueGray-200 rounded-b mx-auto">

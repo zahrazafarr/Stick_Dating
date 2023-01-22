@@ -43,11 +43,10 @@ const Account = () => {
 
     return (
         <>
-            <Navbar showAuth={false} setShowAuth={() => {}}/>
             
             <div className="grid h-screen bg-gradient-to-r from-orange-300 bg-orange-100">
 
-                <h2 className="text-5xl font-bold mt-20 mx-auto mb-11 text-center text-white font-poppins">Get stuck in love...</h2>
+                <h2 className="text-5xl font-bold mt-14 mx-auto mb-11 text-center text-white font-poppins">Get stuck in love...</h2>
 
                 <form className="bg-white shadow-md rounded px-8 pt-6 pb-6 w-100 drop-shadow-[0_3.2px_3.9px_black] mx-auto" onSubmit={handleSubmit}>
                     
