@@ -7,8 +7,8 @@ const Inbox = () => {
     return (
         <>
             <div className="flex flex-row h-screen absolute mx-11">
-                <div className="px-20 py-11 -ml-11 bg-gray-50 shadow-lg shadow-rose-900">
-                    <h1 className="text-2xl text-center">Messages</h1>
+                <div className="px-10 py-11 -ml-11 bg-gray-50 shadow-lg shadow-rose-900">
+                    <h1 className="text-2xl text-center text-rose-900">Messages</h1>
 
                     <div className="allmessageshere">
 

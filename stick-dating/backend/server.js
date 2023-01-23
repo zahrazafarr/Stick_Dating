@@ -2,8 +2,6 @@ const express = require('express');
 const mongoose = require ('mongoose');
 const { MongoClient } = require('mongodb')
 const cors = require('cors');
-const { v1: uuidv1 } = require('uuid');
-const token = require('jsonwebtoken')
 
 const app = express();
 const db = mongoose.connection;
@@ -39,39 +37,21 @@ app.get('/users' , async (req, res) => {
     }
 })
 
-
-app.post('/signup', async (req, res) => {
-
-    const user = new MongoClient(MONGODB_URI)
-    console.log(req.body)
-    const {email, pw} = req.body
-
-    const userId = uuidv1()
-    const hashPw = await bcrypt.hash(pw, 10)
+app.get('/dms' , async (req, res) => {
+    
+    const dm = new MongoClient(MONGODB_URI)
 
     try {
-        user.connect()
-        const data = user.db('date-app-data')
-        const users = data.collection('users')
+        await dm.connect()
+        const data = dm.db('date-app-data')
+        const dms = data.collection('dms')
 
-        const emailInput = email.toLowerCase()
-
-        const newData = {
-            user: userId,
-            email: emailInput,
-            password: hashPw
-        }
-
-        const newUser = await users.insertOne(newData)
-
-        const jwt = token.sign(newUser, emailInput, {
-        expiresIn: 60 * 24,
-        })
-
-        res.status(201).json({ jwt, userId: userId, email: emailInput})
+        const allDms = await dms.find().toArray()
+        res.send(allDms)
     } 
-    catch (err) {
-        console.log(err)
+    finally 
+    {
+        await dm.close()
     }
 })
   

@@ -22,7 +22,6 @@ const Auth = ( {setShowAuth, signingUp} ) => {
             if ( signingUp && ( pw !== confirmPw)) {setError("Passwords don't match") 
             return
         } 
-            console.log('posting', email, pw)
            const data = await axios.post('http://localhost:3000/signup', {email, pw})
             
            const accepted = data.status === 201
